@@ -1,0 +1,14 @@
+
+<div *ngIf="!isControlling">
+    <button (click)="startControlling()">Connect</button>
+</div>
+<div *ngIf="isControlling">
+    <button (click)="timeChanged(false)">-</button>
+    <button (click)="stopControlling()">Connect</button>
+    <button (click)="timeChanged(true)">+</button>
+    {{timer.formattedTime}}
+</div>
+<p>Is someone Controlling : {{isSomeoneControlling}}</p>
+<p><button (click)="toggleFilter()">Filter</button> {{devicesState.filter}}</p>
+<p><button (click)="toggleBubble()">Bubble</button> {{devicesState.bubble}}</p>
+<p><button (click)="toggleLight()">Light</button> {{devicesState.light}}</p>

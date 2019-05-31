@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    background-color: #2D2C31;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+app-snackbar {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    width: 40%;
+    bottom: 150px;
+    pointer-events: none;
+}
+
+app-login-screen {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(45, 44, 49, 0.788);
+}

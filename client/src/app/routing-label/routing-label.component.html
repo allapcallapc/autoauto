@@ -1,0 +1,13 @@
+<body>
+    <div class="all">
+        <button [ngClass]="current === 'Home' ? 'active' : 'NOTHING'" (click)="onButtonClick('Home')">
+            <i class="fa fa-home"></i>
+        </button>
+        <button [ngClass]="current === 'Controls' ? 'active' : 'NOTHING'" (click)="onButtonClick('Controls')">
+            <i class="fa fa-cogs"></i>
+        </button>
+        <button [ngClass]="current === 'Timers' ? 'active' : 'NOTHING'" (click)="onButtonClick('Timers')">
+            <i class="fa fa-clock-o"></i>
+        </button>
+    </div>
+</body>

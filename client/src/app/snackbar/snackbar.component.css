@@ -1,0 +1,26 @@
+
+.noShow {
+    visibility: visible;
+    transform: translateX(-100%);
+    overflow: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+div {
+    transition: linear;
+    transition-delay: 0;
+    transition-duration: 0.7s;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    border-radius: 2px;
+    text-align: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    font-size: 17px;
+    pointer-events: none;
+}

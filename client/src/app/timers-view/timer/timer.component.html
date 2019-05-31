@@ -1,0 +1,55 @@
+<div class="all">
+    <div class="icone" (click)="onClick()">
+        <img [src]="imagePath" align="center" alt="">
+        <label class="closeButton" *ngIf="isDeleteThere">
+            <input type="checkbox" (click)="deleteClick()">
+            <div>X</div>
+        </label>
+    </div>
+    <div>
+        <div class="header">
+            <div class="device">
+                <select [(ngModel)]="timer.device" (change)="putModified()">
+                    <option *ngFor="let item of getEnumType()" value="{{item}}">{{item}}</option>
+                </select>
+            </div>
+            <div class="dates">
+                <div class="dateEnd">{{endDate}}</div>
+                <div class="dateStart">{{startDate}}</div>
+            </div>
+        </div>
+        <div class="slider">
+            <ng5-slider [(value)]="timer.start" [(highValue)]="timer.end" [options]="options" (valueChange)="putModified()"></ng5-slider>
+        </div>
+        <div class="weekRow">
+            <label [ngClass]="timer.days.sunday ? 'weekCheckLabel' : 'weekLabel'">
+                <div [ngClass]="timer.days.sunday ? 'weekChecked' : 'weekNotChecked'">S</div>
+                <input type="checkbox" [(ngModel)]="timer.days.sunday" (click)="putModified()">
+            </label>
+            <label [ngClass]="timer.days.monday ? 'weekCheckLabel' : 'weekLabel'">
+                <div [ngClass]="timer.days.monday ? 'weekChecked' : 'weekNotChecked'">M</div>
+                <input type="checkbox" [(ngModel)]="timer.days.monday" (click)="putModified()">
+            </label>
+            <label [ngClass]="timer.days.tuesday ? 'weekCheckLabel' : 'weekLabel'">
+                <div [ngClass]="timer.days.tuesday ? 'weekChecked' : 'weekNotChecked'">T</div>
+                <input type="checkbox" [(ngModel)]="timer.days.tuesday" (click)="putModified()">
+            </label>
+            <label [ngClass]="timer.days.wednesday ? 'weekCheckLabel' : 'weekLabel'">
+                <div [ngClass]="timer.days.wednesday ? 'weekChecked' : 'weekNotChecked'">W</div>
+                <input type="checkbox" [(ngModel)]="timer.days.wednesday" (click)="putModified()">
+            </label>
+            <label [ngClass]="timer.days.thursday ? 'weekCheckLabel' : 'weekLabel'">
+                <div [ngClass]="timer.days.thursday ? 'weekChecked' : 'weekNotChecked'">T</div>
+                <input type="checkbox" [(ngModel)]="timer.days.thursday" (click)="putModified()">
+            </label>
+            <label [ngClass]="timer.days.friday ? 'weekCheckLabel' : 'weekLabel'">
+                <div [ngClass]="timer.days.friday ? 'weekChecked' : 'weekNotChecked'">F</div>
+                <input type="checkbox" [(ngModel)]="timer.days.friday" (click)="putModified()">
+            </label>
+            <label [ngClass]="timer.days.saturday ? 'weekCheckLabel' : 'weekLabel'">
+                <div [ngClass]="timer.days.saturday ? 'weekChecked' : 'weekNotChecked'">S</div>
+                <input type="checkbox" [(ngModel)]="timer.days.saturday" (click)="putModified()">
+            </label>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+body {
+    align-content: center;
+    text-align: center;
+    padding-bottom: 100px;
+    position: relative;
+    top: 0;
+}
+
+.timerDiv {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 700px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    border-radius: 0px;
+    border: solid 2px black;
+}
+/* witdh */
+.timerDiv::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 10px;
+}
+
+/* Track */
+.timerDiv::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 300px;
+}
+
+/* Handle */
+.timerDiv::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 30px;
+}
+
+/* Handle on hover */
+.timerDiv::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: #2D2C31;
+  margin: 0 auto;
+  width: 96%;
+  max-width: 700px;
+  padding-bottom: 1%;
+  z-index: 100;
+}
+
+.headerRowOne {
+  padding-bottom: 2%;
+}
+
+.headerRowOne button {
+  width: 20%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.headerRowTwo {
+  display: grid;
+  grid-template-columns: 20% auto;
+}
+
+.headerRowTwo .sortSection {
+  position: relative;
+  margin: 0;
+  display: table;
+  text-align: left;
+  padding-top: 1%;
+  vertical-align: bottom;
+}
+
+.headerRowTwo .plusButton {
+  position: relative;
+  content: "";
+  display: block;
+  width: 50%;
+  left: 25%;
+  padding-top: 5%;
+  font-size: 3vh;
+}

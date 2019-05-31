@@ -1,0 +1,8 @@
+<div class="box">
+    <div class="title"> Login </div>
+    <form  [formGroup]= "form" class="form">
+        <input type="text"  formControlName="username" (keydown)="keyDownFunction($event)" placeholder="Username" [ngClass]="isError ? 'fieldError' : 'field'" #inputNameBox>
+        <input type="password"  formControlName="password" (keydown)="keyDownFunction($event)" placeholder="Password" [ngClass]="isError ? 'fieldError' : 'field'">   
+    </form>
+    <div class="bottom"><button [disabled]="isSendDisabled()" (click)="login()">Send</button></div>
+</div>

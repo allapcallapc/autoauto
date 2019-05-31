@@ -1,0 +1,6 @@
+<div class="all">
+    <router-outlet [ngClass]="isHomeView() ? 'withoutLabel' : 'withLabel'"></router-outlet>
+    <app-routing-label *ngIf="isHomeView()" [current]="getCurrent()"></app-routing-label>
+    <app-login-screen *ngIf="isLoginScreenOn()"></app-login-screen>
+    <app-snackbar #snackbar></app-snackbar>
+</div>

@@ -1,0 +1,26 @@
+<body>
+    <div class="header">
+        <div class="headerRowOne">
+            <button (click)="dateClicked()">Today</button>
+            <button (click)="dateClicked(1)">Tomorrow</button>
+            <button>Simplify</button>
+            <button (click)="saveChanges()">Save</button>
+        </div>
+        <div class="headerRowTwo">
+            <button (click)="addTimer()" class="plusButton"><i class="fa fa-plus"></i></button>
+            <div class="sortSection">
+                Sort :
+                <select [(ngModel)]="sortType1" (change)="sortType1Changed()">
+                    <option *ngFor="let item of getEnumType1()" value="{{item}}">{{item}}</option>
+                </select>
+                 | 
+                <select *ngIf="sortType1Enum.All !== sortType1" [(ngModel)]="sortType2" (change)="sortType2Changed()">
+                    <option *ngFor="let item of getEnumType2()" value="{{item}}">{{item}}</option>
+                </select>
+            </div>   
+        </div>
+    </div>
+    <div class="timerDiv">
+        <app-timer *ngFor="let timer of timersToDisplay" [timer]="timer" (timerDelete)="deleteTimer(timer)"></app-timer>
+    </div>
+</body>

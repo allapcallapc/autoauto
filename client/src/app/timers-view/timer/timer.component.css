@@ -1,0 +1,255 @@
+.all {
+    border: solid 2px black;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-gap: 1%;
+    text-align: center;
+    border-right: none;
+    position: relative;
+}
+
+.closeButton {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 0, 0, 0.281);
+    text-align: center;
+    vertical-align: center;
+    display: table;
+    overflow: hidden;
+}
+
+.closeButton input {
+    opacity: 0;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    height: 150%;
+    width: 120%;
+    z-index: 100;
+}
+
+.closeButton div {
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    position: absolute;
+    font-size: 40px;
+    top: calc(50% - 25px);
+    left: calc(50% - 15px);
+    z-index: 99;
+    vertical-align: center;
+}
+
+.icone {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+}
+
+.icone img {
+    float: left;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    position: relative;
+}
+
+.dates {
+    display: inline-block;
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+}
+
+.header .device {
+    align-content: left;
+    text-align: left;
+    color: rgb(252, 252, 252);
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.device select {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: white;
+    border: solid 0.5px rgba(100, 100, 100, 0.164);
+    border-radius: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.device select:focus {
+    outline: none;
+}
+
+.device option {
+    background-color: #2D2C31;
+    border: none;
+    outline: none;
+}
+
+.header .dateStart, .header .dateEnd {
+    position: relative;
+    padding-left: 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    bottom: 0;
+}
+
+.header .dateStart {
+    align-content: right;
+    text-align: right;
+    float: right;
+}
+
+.header .dateEnd {
+    align-content: right;
+    text-align: right;
+    float: right;
+}
+
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 3%;
+}
+
+.weekRow {
+    display: grid;
+    width: 70%;
+    margin: 0 auto;
+    grid-template-columns: 11.7% 11.7% 11.7% 11.7% 11.7% 11.7% 11.7%;
+    grid-gap: 3%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.weekRow input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.weekCheckLabel .weekLabel {
+    border-radius: 100%;
+    transition: 0.2s;
+    user-select: none;
+    max-width: 95%;
+    max-height: 95%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.weekLabel:hover {
+    cursor: pointer;
+}
+
+.weekCheckLabel:hover {
+    cursor: pointer;
+}
+
+.weekCheckLabel {
+    border: solid 1px rgb(203, 221, 255);
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+.weekLabel {
+    border: solid 1px rgb(100, 100, 100);
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+.weekChecked .weekNotChecked {
+    position: relative;
+    user-select: none;
+    transition: 0.5s;
+    user-select: none;
+}
+
+.weekChecked {
+    color: rgb(203, 221, 255);
+    transition: 0.5s;
+    user-select: none;
+}
+
+.weekNotChecked {
+    color: rgb(100, 100, 100);
+    transition: 0.5s;
+    user-select: none;
+    position: relative;
+}
+
+
+/* Slider Aspect */
+::ng-deep .slider .ng5-slider .ng5-slider-bar {
+    color: #FAFAFA;
+    height: 2px;
+    background: linear-gradient(to right, rgb(100, 100, 100) 50%, rgb(100, 100, 100) 50%);
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+::ng-deep .slider .ng5-slider .ng5-slider-selection {
+    background: rgb(203, 221, 255);
+    z-index: 1;
+}
+
+::ng-deep .slider .ng5-slider .ng5-slider-pointer {
+    width: 12px;
+    height: 12px;
+    transform: translateY(3px);
+    top: auto; /* to remove the default positioning */
+    bottom: 0;
+    background-color: rgb(203, 221, 255);
+    border-radius: 50px;
+    user-select: none;
+    z-index: 1;
+}
+
+::ng-deep .slider .ng5-slider .ng5-slider-pointer:focus {
+    outline: none;
+    z-index: 1;
+}
+
+::ng-deep .slider .ng5-slider .ng5-slider-pointer:after {
+    display: none;
+    z-index: 1;
+}
+
+body {
+    position: relative;
+    z-index: -1;
+}
+
+::ng-deep .slider .ng5-slider {
+    z-index: 0;
+}
+
+.ng5-slider-bar-wrapper {
+    z-index: 1;
+  }

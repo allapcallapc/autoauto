@@ -1,0 +1,16 @@
+<body>
+	<div class="all">
+		<div [ngClass]="isSmallTextClass ? 'titleSmall' : 'title'">
+			Automation
+		</div>
+
+		<div [ngClass]="isSmallTextClass ? 'btnContainerSmall' : 'btnContainer'" id="buttonContainer">
+			<button class="btn btn-blob" (click)="onClick()">
+				<div [ngClass]="isSmallTextClass ? 'btnTextSmall' : 'btnText'">&#8680;</div>
+			</button>
+		</div>
+	</div>
+	<div class="fishes" [style.height.px]="heightFishes">
+		<app-fishes></app-fishes>
+	</div>
+</body>
