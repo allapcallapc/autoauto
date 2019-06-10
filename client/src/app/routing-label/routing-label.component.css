@@ -7,7 +7,7 @@ body {
     margin:0;
     overflow-x: auto;
     overflow-y: hidden;
-    background: red;
+    background: rgba(45, 44, 49, 0.95);
     padding-bottom: 10px;
     padding-top: 10px;
     overflow: hidden;
@@ -51,7 +51,7 @@ body {
 
 .all button {
     background-color: #252527;
-    color: red;
+    color: rgb(100, 100, 100);
     display: block;
     text-align: center;
     width: 100%;
@@ -75,7 +75,7 @@ body {
 }
 
 .all button.active {
-    background-color: red;
+    background-color: #1E1E20;
     color: rgb(203, 221, 255);
     transform: scaleY(0.98);
 }

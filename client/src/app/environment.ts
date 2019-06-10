@@ -1,1 +1,1 @@
-export const RASP_SERVER_URL: string = "http://192.168.0.182:3044/";
+export const RASP_SERVER_URL: string = "http://74.56.70.180:3044/";
