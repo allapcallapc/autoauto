@@ -3,8 +3,7 @@ import { Observable } from "rxjs";
 import * as io from "socket.io-client";
 import { ControllableDevicesState } from "../../../../common/communication/controllableDevicesState";
 import { LoginService } from "../login-screen/login.service";
-
-const BASE_SERVER_URL: string = "http://localhost:3000/";
+import { RASP_SERVER_URL } from "../environment";
 
 @Injectable({
   providedIn: "root",
@@ -14,7 +13,7 @@ export class ControlsUpdateService {
   public socket: SocketIOClient.Socket;
 
   public constructor() {
-    this.socket = io(`${BASE_SERVER_URL}controls`);
+    this.socket = io(`${RASP_SERVER_URL}controls`);
   }
 
   public toggleFilter(): void {

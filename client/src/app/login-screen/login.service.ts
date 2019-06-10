@@ -3,8 +3,8 @@ import { Observable } from "rxjs";
 import * as io from "socket.io-client";
 import { Credential } from "../../../../common/communication/credential";
 import { SnackbarComponent } from "../snackbar/snackbar.component";
+import { RASP_SERVER_URL } from "../environment";
 
-const BASE_SERVER_URL: string = "http://localhost:3000/";
 const CREDENTIAL_KEY_STORAGE: string = "CredsInStorage_132455651316fsdufhks kfsd";
 
 @Injectable({
@@ -19,7 +19,7 @@ export class LoginService {
   public promiseNewKey: EventEmitter<string>;
 
   public constructor() {
-    this.socket = io(`${BASE_SERVER_URL}account`);
+    this.socket = io(`${RASP_SERVER_URL}account`);
     this.isLoginScreenOn = false;
     LoginService.instance = this;
     this.promiseNewKey = new EventEmitter<string>();

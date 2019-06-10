@@ -2,8 +2,9 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Timer } from "../../../../common/communication/timer";
 import { TimerSaveAnswer } from "./timerSaveAnswer";
+import { RASP_SERVER_URL } from "../environment";
 
-const BASE_SERVER_URL: string = "http://localhost:3000/api/timer";
+const BASE_SERVER_URL: string = `${RASP_SERVER_URL}api/timer`;
 
 @Injectable({
     providedIn: "root",
